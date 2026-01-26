@@ -222,3 +222,99 @@ footer {
 
 /*Start writing you css code from here*/
 
+/* TODO 2: Basic Element Selectors */
+p {
+    color: #333;
+    font-size: 16px;
+}
+
+span {
+    color: #888;
+    font-size: 14px;
+}
+
+/* TODO 3: Class Selectors */
+.username {
+    color: #1877f2;
+    font-weight: bold;
+}
+
+.blue-text {
+    color: #4267B2;
+}
+
+.red-text {
+    color: #e74c3c;
+}
+
+.highlight {
+    background-color: #f0f2f5;
+    padding: 15px;
+}
+
+/* TODO 4: ID Selectors */
+#featured-user {
+    color: #42b883;
+    font-size: 18px;
+}
+
+/* TODO 5: Specificity Battle */
+p {
+    color: #333;
+}
+
+.winner {
+    color: #ff6b6b;
+}
+
+#specificity-test {
+    color: #4ecdc4;
+}
+
+p.winner {
+    color: #95a5a6;
+}
+
+/* TODO 6: !important Override */
+.important-test {
+    color: #e67e22 !important;
+}
+
+/* TODO 7: Descendant Selectors */
+.chat-container .message {
+    color: #2c3e50;
+}
+
+.chat-container .message-time {
+    color: #7f8c8d;
+    font-size: 12px;
+}
+
+.simple-form input {
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* TODO 8: Pseudo-classes */
+.send-button:hover {
+    background-color: #3b5998;
+    color: white;
+}
+
+.simple-form button:hover {
+    background-color: #145dbf;
+}
+
+.chat-link:hover {
+    color: #1877f2;
+    text-decoration: none;
+}
+
+/* TODO 9: Group Selectors */
+h4.trending-tag,
+h5.trending-tag,
+h6.trending-tag {
+    color: #8b9dc3;
+    font-family: Arial;
+}
