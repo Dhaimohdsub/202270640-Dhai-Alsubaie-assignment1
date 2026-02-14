@@ -1,128 +1,250 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SocialBook - CSS Styling Practice</title>
-    <!-- TODO: Link the external CSS file here -->
-     <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dhai Alsubaie - SWE Portfolio (Assignment 1)." />
+  <title>Dhai Alsubaie | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <div id="app">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-        <!-- Header Section -->
-        <header>
-            <h1>SocialBook</h1>
-            <p>A simple social media app - Style it with CSS!</p>
-        </header>
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" id="top">Dhai Alsubaie</a>
 
-        <!-- Navigation -->
-        <nav class="navigation">
-            <a href="#feed">Feed</a>
-            <a href="#profile">Profile</a>
-            <a href="#messages">Messages</a>
-            <a href="#contact">Contact</a>
-        </nav>
+      <nav class="topnav" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#tools">Tools</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-        <!-- News Feed Section -->
-        <section id="feed">
-            <h2>News Feed</h2>
-
-            <!-- Post 1 -->
-            <div class="post">
-                <h3 class="username">john_doe</h3>
-                <p>Just finished my web development project! 🎉</p>
-                <span class="timestamp">2 hours ago</span>
-            </div>
-
-            <!-- Post 2 - Highlighted/Pinned -->
-            <div class="post highlight">
-                <h3 id="featured-user" class="username">sarah_dev</h3>
-                <p class="blue-text">Check out this amazing CSS tutorial I found!</p>
-                <p class="red-text">Link in my bio 👆</p>
-                <span class="timestamp">5 hours ago</span>
-            </div>
-
-            <!-- Post 3 -->
-            <div class="post">
-                <h3 class="username">alex_coder</h3>
-                <p>Working late on CSS specificity... when will it end? 😅</p>
-                <span class="timestamp">1 day ago</span>
-            </div>
-        </section>
-
-        <!-- Profile Section -->
-        <section id="profile">
-            <h2>User Profile</h2>
-
-            <div class="profile-card">
-                <h3>CSS Specificity Battle</h3>
-                <p class="winner" id="specificity-test">
-                    This bio text color depends on CSS specificity rules!
-                </p>
-                <p class="follower-count">1,337 followers</p>
-            </div>
-
-            <div class="profile-card">
-                <h3>Bio Override Test</h3>
-                <p class="important-test" style="color: blue;">
-                    This bio has inline style, but will !important override it?
-                </p>
-            </div>
-        </section>
-
-        <!-- Messages Section -->
-        <section id="messages">
-            <h2>Messages</h2>
-
-            <div class="message-thread">
-                <h3>Chat with Friends</h3>
-                <div class="chat-container">
-                    <p class="message sent">Hey! How's your CSS project going?</p>
-                    <span class="message-time">You - 10:30 AM</span>
-                </div>
-                <div class="chat-container">
-                    <p class="message received">Pretty good! Learning about descendant selectors.</p>
-                    <span class="message-time">Friend - 10:32 AM</span>
-                </div>
-            </div>
-
-            <div class="message-thread">
-                <h3>Interactive Elements</h3>
-                <button class="send-button">Send Message</button>
-                <a href="#" class="chat-link">Start New Chat</a>
-            </div>
-        </section>
-
-        <!-- contact form Section -->
-        <section id="contact"> 
-            <form class="contact-container simple-form">
-                <label for="username">Username</label>
-                <input type="text" id="username" placeholder="Enter username">
-
-                <label for="email">Email</label>
-                <input type="text" id="email" placeholder="Enter email">
-
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-
-        <!-- Trending Section -->
-        <section id="trending">
-            <h2>Trending Topics</h2>
-            <h4 class="trending-tag">#WebDevelopment</h4>
-            <h5 class="trending-tag">#CSS</h5>
-            <h6 class="trending-tag">#HTML</h6>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2024 SocialBook - A CSS Styling Exercise</p>
-        </footer>
-
+      <div class="topbar__actions">
+        <button class="btn btn--ghost" id="themeToggle" type="button" aria-pressed="false">
+          Toggle Theme
+        </button>
+      </div>
     </div>
-</body>
+  </header>
 
+  <main id="main" class="layout container">
+    <!-- Left profile card -->
+    <aside class="profile">
+      <div class="profile__card">
+        <div class="profile__media">
+          <img src="assets/images/profile.png" alt="Profile image" />
+          <div class="profile__badge" id="greeting">Hello!</div>
+        </div>
+
+        <div class="profile__body">
+          <h2 class="profile__name">Dhai Alsubaie</h2>
+          <p class="profile__role">Software Engineering Student</p>
+
+          <p class="profile__bio">
+            Building simple solutions to real problems — focused on web development, databases, and AI.
+          </p>
+
+          <div class="profile__links">
+            <a class="chip" href="mailto:dhaialsubaie@gmail.com" aria-label="Email">Email</a>
+            <a class="chip" href="#projects" aria-label="Go to projects">Projects</a>
+            <a class="chip" href="#contact" aria-label="Go to contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right content -->
+    <section class="content">
+      <!-- HERO -->
+      <section class="hero">
+        <h1 class="hero__title">
+          SOFTWARE <span class="ghost">ENGINEER</span>
+        </h1>
+
+        <p class="hero__subtitle">
+          I’m Dhai Alsubaie, a SWE student passionate about practical systems, clean UI, and AI-powered solutions.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__num">03</div>
+            <div class="stat__label">Selected Projects</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">SWE</div>
+            <div class="stat__label">Major</div>
+          </div>
+          <div class="stat">
+            <div class="stat__num">AI</div>
+            <div class="stat__label">Focus Area</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="block" id="projects">
+        <div class="block__head">
+          <h2 class="block__title">RECENT <span class="ghost">PROJECTS</span></h2>
+          <p class="block__desc">Academic projects demonstrating SWE fundamentals.</p>
+        </div>
+
+        <div class="project-list">
+          <article class="project-item">
+            <div class="project-item__thumb">
+              <img src="assets/images/project-coe292.png" alt="COE 292 project preview" />
+            </div>
+            <div class="project-item__main">
+              <h3>AI Classification Project</h3>
+              <p>
+                Implemented K-NN, SVM, and MLP on a real-world dataset using 5-fold stratified cross-validation and
+                evaluation metrics (accuracy, precision, recall, F1, confusion matrix).
+              </p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Scikit-learn</span>
+                <span class="tag">MLP</span>
+                <span class="tag">Classification</span>
+              </div>
+            </div>
+            <a class="arrow" href="#" aria-label="COE 292 link placeholder">↗</a>
+          </article>
+
+          <article class="project-item">
+            <div class="project-item__thumb">
+              <img src="assets/images/project-ics321.png" alt="ICS321 project preview" />
+            </div>
+            <div class="project-item__main">
+              <h3>Horse Racing Database System</h3>
+              <p>
+                Built a MySQL-based system with admin/guest functions, advanced queries, a stored procedure for cascading
+                deletion, and a trigger to archive deleted horse records.
+              </p>
+              <div class="tags">
+                <span class="tag">MySQL</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Procedures</span>
+                <span class="tag">Triggers</span>
+              </div>
+            </div>
+            <a class="arrow" href="#" aria-label="ICS321 link placeholder">↗</a>
+          </article>
+
+          <article class="project-item">
+            <div class="project-item__thumb">
+              <img src="assets/images/project-swe316.png" alt="SWE 316 project preview" />
+            </div>
+            <div class="project-item__main">
+              <h3>Term Schedule Visualization App</h3>
+              <p>
+                Parsed a large Excel schedule, allowed CRN input and weekday selection, and drew the student route between
+                classes on a custom panel (no ready-made visualization components), including distance and summary stats.
+              </p>
+              <div class="tags">
+                <span class="tag">Data Viz</span>
+                <span class="tag">Excel Parsing</span>
+                <span class="tag">OOP</span>
+                <span class="tag">Custom Drawing</span>
+              </div>
+            </div>
+            <a class="arrow" href="#" aria-label="SWE 316 link placeholder">↗</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="block" id="experience">
+        <div class="block__head">
+          <h2 class="block__title">LEARNING <span class="ghost">PATH</span></h2>
+          <p class="block__desc">What I’m currently building and improving.</p>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Web Foundations</h3>
+            <p class="muted">HTML, CSS (Grid/Flexbox), JavaScript (DOM + localStorage), responsive layouts.</p>
+            <p class="muted small">2026 — Present</p>
+          </div>
+
+          <div class="card">
+            <h3>Databases</h3>
+            <p class="muted">SQL queries, schema design, stored procedures, triggers, and data integrity constraints.</p>
+            <p class="muted small">2025 — Present</p>
+          </div>
+
+          <div class="card">
+            <h3>AI / ML</h3>
+            <p class="muted">Classification models (KNN, SVM, MLP), validation, hyperparameters, evaluation metrics.</p>
+            <p class="muted small">2024 — Present</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOOLS -->
+      <section class="block" id="tools">
+        <div class="block__head">
+          <h2 class="block__title">TOOLS <span class="ghost">& STACK</span></h2>
+          <p class="block__desc">Tech I used across my coursework projects.</p>
+        </div>
+
+        <div class="tools">
+          <div class="tool">VS Code</div>
+          <div class="tool">Git & GitHub</div>
+          <div class="tool">MySQL</div>
+          <div class="tool">Python</div>
+          <div class="tool">Scikit-learn</div>
+          <div class="tool">Jupyter</div>
+          <div class="tool">HTML/CSS/JS</div>
+          <div class="tool">ChatGPT (AI Assistant)</div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="block" id="contact">
+        <div class="block__head">
+          <h2 class="block__title">LET’S WORK <span class="ghost">TOGETHER</span></h2>
+          <p class="block__desc">
+            Email: <a class="link" href="mailto:dhaialsubaie@gmail.com">dhaialsubaie@gmail.com</a>
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <form class="card form" id="contactForm" novalidate>
+            <label>
+              Name
+              <input type="text" name="name" id="name" autocomplete="name" required />
+              <span class="error" id="nameError"></span>
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" id="email" autocomplete="email" required />
+              <span class="error" id="emailError"></span>
+            </label>
+
+            <label>
+              Message
+              <textarea name="message" id="message" rows="5" required></textarea>
+              <span class="error" id="messageError"></span>
+            </label>
+
+            <div class="notice" id="formNotice" role="status" aria-live="polite"></div>
+
+            <button class="btn" type="submit">Submit</button>
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>© <span id="year"></span> Dhai Alsubaie</p>
+        <a class="link" href="#top">Back to top</a>
+      </footer>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
 </html>
